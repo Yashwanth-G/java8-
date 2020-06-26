@@ -26,7 +26,7 @@ public class DefenderDemo implements Defender{
 		DefenderDemo d = new DefenderDemo();
 		d.normalMethod();
 		
-		//Eventhough we do not override defaultMethod of interface the code complies and runs fine as it is declared as default
+		//Eventhough we do not override defaultMethod of interface in DefenderDemo class the code complies and runs fine as it is declared as "default"
 		d.defaultMethod(); 
 	}
 }
