@@ -1,6 +1,5 @@
 //Sample java program to demonstrate default methods in interfaces 
 
-
 interface Defender{
 	public void normalMethod();
   
