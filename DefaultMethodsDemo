@@ -1,0 +1,32 @@
+//Sample java program to demonstrate default methods in interfaces 
+
+interface Defender{
+	public void normalMethod();
+  
+	default void defaultMethod(){
+		System.out.println("Default implementation");
+	}
+}
+
+//Implementation class that is implementing Defender interface 
+public class DefenderDemo implements Defender{
+	
+	//Constructor
+	public DefenderDemo(){}
+	
+	@Override
+	public void normalMethod(){
+		System.out.println("Overriding of abstract method of an interface");
+	}
+	
+	//Driving method
+	public static void main(String[] args){
+		
+		//creating implementation class object 
+		DefenderDemo d = new DefenderDemo();
+		d.normalMethod();
+		
+		//Eventhough we do not override defaultMethod of interface the code complies and runs fine as it is declared as default
+		d.defaultMethod(); 
+	}
+}
