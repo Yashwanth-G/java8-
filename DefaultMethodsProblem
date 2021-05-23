@@ -1,0 +1,36 @@
+
+// Interface with default method move()
+public interface Animal{
+
+	default void move(){
+
+		System.out.println("All animals will move");
+
+	}
+
+}
+
+
+// Another Interface with same default method move() 
+public interface Amphibian{
+
+	default void move(){
+
+		System.out.println("All Amphibian will move");
+
+	}
+
+}
+
+
+public class Frog implements Animal, Amphibian{
+
+	// If we don't override the default method move in this Test class we will get error saying "class Frog inherits unrelated defaults for move() from types Animal and Amphibian"
+
+  // Overriding the default method below to avoid the above commented error
+  @Override
+  public void move(){
+     System.out.println("Frog jumps to move");
+  }
+}
+
